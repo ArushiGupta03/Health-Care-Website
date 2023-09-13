@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIETZONE</title>
+
+  <script src="scripts/Calculator.js" type = "text/javascript">  
+</script>  
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=EB+Garamond:ital,wght@0,400;0,500;1,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=EB+Garamond:ital,wght@0,400;1,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=EB+Garamond:ital,wght@1,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=EB+Garamond:ital,wght@1,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap');
+ </style>
+
+
+
+ 
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>  
+
+<body>
+    <div id="home">
+    <header class="header">
+            
+        <div class="middle">
+            <ul class="navbar" >
+                <li> <a  id="li1" href="#home" target="_blank"><strong>Home</strong></a> </li>
+                <li> <a href="#whydiet"><strong>Why DietZone?</strong></a></li>
+                <li> <a href="#fitness"><strong>Fitness Calculator</strong></a></li>
+                <li> <a href="#success"><strong>Success Stories</strong></a></li>
+                <li> <a href="#contact"><strong>Contact Us</strong></a></li>
+            </ul>
+        </div>
+     
+        <div class="right">
+            <div>
+            <img src="images/DIETZONE (1).png"/> 
+            </div>
+
+        </div>
+        
+    </header>
+
+</div> 
+
+<div class="image">
+    <img src="images/Dietnew.png"/>
+</div>
+<div id="bmi1">
+    <img src="images/bmichart.PNG" alt="" height="350"/>
+</div>
+
+<div class="container"> 
+    <h2>WHAT IS BMI?</h2>
+    <P><b>BMI</b> is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between.</P>
+    <h2>WHAT IS BODY FAT?</h2>
+    <p><b>Body fat</b> includes essential body fat and storage body fat. Essential body fat is a base level of fat that is found in most parts of the body. It is necessary fat that maintains life and reproductive functions. The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women. The healthy range of body fat for men is typically defined as 8-19%, while the healthy range for women is 21-33%.</p>
+    <h2>WHAT IS BMR?</h2>
+    <P><b>The basal metabolic rate (BMR)</b> is the amount of energy needed while resting in a temperate environment when the digestive system is inactive. It is the equivalent of figuring out how much gas an idle car consumes while parked. In such a state, energy will be used only to maintain vital organs, which include the heart, lungs, kidneys, nervous system, intestines, liver, lungs, sex organs, muscles, and skin.</P>
+    <h2>WHY DO WE NEED TO CALCULATE THEM?</h2>
+    <P>These are guidelines that allow nutrition and medical professionals to make educated determinations about your body composition and calorie burn. If a person is trying to lose weight, calculating their BMI, BMR or Body Fat could help them figure out how many calories to cut out each day. They are used to screen for weight categories that may lead to health problems.  It’s a good way to gauge whether you are healthy or not. </P>
+    <h2 id="whydiet">HOW DIETZONE HELPS?</h2>
+    <P><b>DIETZONE</b> creates personalized meal plans based on your food preferences, budget, and schedule. Reach your diet and nutritional goals with our calorie calculators and meal plans. Create your meal plan right here in seconds.</P>
+ 
+<div>
+    <p id="fc"><strong>Fitness Calculator</strong></p>  
+</div>
+
+<div id="fitness">  
+ 
+    <div  id="fitnessbox">
+    <label for="gender"><b>Gender</b></label><br>
+    Male <input type="radio" id="gender"  name="gender" value = "Male" checked>
+    Female <input type="radio" id="gender"  name="gender" value = "Female"><br><br>
+
+    <label for="weight"><b>Weight</b></label><br>
+    <input type="number" id="weight" name="weight" value=73>
+
+    <select name="unitw" id="unitw">
+        <option value="Kg" selected>Kg</option>
+        <option value="lb">lb</option>
+    </select> <br><br>
+    
+    
+    <label for="height"><b>Height</b></label><br>
+    <input type="number" id="height"  name="height" value = 1.79 >
+    
+    <select name="unith" id="unith">
+        <option value="m" selected>m</option>
+        <option value="cm">cm</option>
+        <option value="inch">inch</option>
+    </select> <br><br>
+
+    <label for="age"><b>Age</b></label><br>
+    <input type="number" id="age"  name="age" value = 50 ><br><br>
+
+    <input type = "button" onclick = "bodycomposition(document.getElementById('weight').value,
+    document.getElementById('unitw').value, document.getElementById('height').value, 
+    document.getElementById('unith').value, document.getElementById('age').value)" value = "Calculate">  
+    </div>
+
+    <p>Your BMI is: <strong id="bmi"></strong></p>
+    <p>Your Body Fat is: <strong id="fat"></strong></p>
+    <p>Your BMR is: <strong id="bmr"></strong></p>
+
+    <!-- <p>Weight is: <strong id="wt"></strong></p>
+    <p>Height is: <strong id="ht"></strong></p>
+    <p>Age is: <strong id="at"></strong></p>
+    <p>Unit Weight is: <strong id="uwt"></strong></p>
+    <p>Unit Height is: <strong id="uht"></strong></p>
+    <p>Gender is: <strong id="gent"></strong></p> -->
+    
+ 
+</div>
+
+<div>
+<a id="linkbutton" class="linkbtnclass"  href="#" target="_blank">Get Your Diet Plan</a>
+</div>
+
+<div id="under">
+    <div class="diet-box">
+        <h3 class="diet-para">UNDERWEIGHT</h3>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR BREAKFAST(8:00-8:30AM)- egg brown bread sandwich, onion stuffed parantha, paneer stuffed besan cheela, vegetable bread upma, cucumber potato sandwich, vegetable poha, vegetable suji cheela, dry fruits, milk, smoothies, shakes, juice</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR LUNCH(2:00-2:30PM)- 1 bowl dal(any) + 1 bowl vegetable(any) + 3 chapatis + 1 bowl low curd + 1/2 bowl rice + salad</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR EVENING SNACKS (4:00-4:30PM)- fruit salad, vegetable cutlets,sprouts salad, potato cheela, upma,  butter toasted bread, juice, soup, milk, smoothie</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR DINNER(8:00-8:30PM)- 1 bowl vegetable(any) + 3 chapatis + salad<br></p>
+
+        <h3 class="diet-para">Do's And Don'ts While Following Diet Plan for Underweight</h3>
+
+        <p class="diet-para"><strong> Do's</strong></p>
+
+        <div class="diet-para">
+            •  Eat more often<br>
+            •  Drink Milk<br>
+            •  Try Weight gainer shakes<br>
+            •  Use Bigger Plates<br>
+            •  Add cream to your coffee<br>
+            •  Take Creatine<br>
+            •  Get Quality Sleep<br>
+            •  Eat your protein first and vegetables last<br>
+
+        </div>
+
+        <p class="diet-para"><strong> Dont's</strong></p>
+
+        <div class="diet-para">
+            •  Drink water before meals<br>
+            •  Smoke<br>
+            
+        </div>
+    </div>
+</div>
+
+<div id="normal">
+    <div class="diet-box">
+        <h3 class="diet-para">NORMAL WEIGHT</h3>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR: BREAKFAST(800-8:30AM)- poached eggs, whole-wheat English muffin, french toast, egg-veggie scramble, protein pancakes, milk, juice, smoothie</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR LUNCH(2:00-2:30PM)-1 bowl dal(any) + 1 bowl vegetable(any) + 1-2 chapatis + 1 bowl low curd + 1/2 bowl rice + salad</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR EVENING SNACKS (4:00-4:30PM)- fruit salad, vegetable cutlets,sprouts salad, potato cheela, upma,  butter toasted bread, juice, soup, milk, smoothie</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR DINNER(8:00-8:30PM)- 1 bowl vegetable(any) + 1-2 chapatis + salad</p>
+        
+        <h3 class="diet-para">Do's And Dont's While following Diet Plan for Normal Weight</h3>
+
+        <p class="diet-para"><strong> Do's</strong></p>
+
+        <div class="diet-para">
+            •  Eat according to the food pyramid and maintain a balanced diet.<br>
+            •  Choose more fresh vegetables and meat and foods that are rich in dietary fibre such as whole wheat cereal products.<br>
+            •  Choose low-fat or skimmed dairy products.<br>
+            •  Drink 6 to 8 glasses of fluids such as water, plain tea or clear soup every day.<br>
+            •  Have three meals everyday at regular hours. Healthy snacks can be taken between meals.<br>
+            •  Have breakfast every day.<br>
+            •  Try and eat home cooked meals as far as possible because most food offered by restaurants and fast food outlets are high in calories and rich in fat while low on dietary fibres.<br>
+            •  Relax when you eat and chew slowly.<br>
+            •  Read the food labels carefully when you buy any food item.<br>
+        </div>
+
+        <p class="diet-para"><strong> Dont's</strong></p>
+
+        <div class="diet-para">
+            •  Don't eat high sugar food such as candies, ice-creams, soft drinks and other sugar added drinks.<br>
+            •  Don't eat too salty, marinated or preserved foods such as salted fish, preserved vegetables, Chinese sausages etc.<br>
+            •  Don't eat too much before going to bed.<br>
+            •  Don't buy food from unlicensed hawkers.<br>
+        </div>
+</div>
+
+<div id="over">
+    <div class="diet-box">
+        <h3 class="diet-para">OVERWEIGHT</h3>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR BREAKFAST(8:00-8:30AM)-vegetable brown bread upma, vegetable poha, brown rice idlis, brown bread toasts, egg omelette, skimmed milk, coconut water</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR LUNCH(2:00-2:30PM)- 1 bowl dal(any) + 1-2 chapatis + 1/2 bowl low fat curd + salad</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR EVENING SNACKS (4:00-4:30PM)-fruit salad, sprouts salad, soup, fruits, low fat milk (no sugar), juice, dry fruits</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR DINNER(8:00-8:30PM)- 1 bowl vegetable(any) + 1 bowl dal(any) + 1-2 chapatis </p>
+
+        <h3 class="diet-para">Do's And Dont's While following Diet Plan for Overweight</h3>
+
+        <p class="diet-para"><strong> Do's</strong></p>
+
+        <div class="diet-para">
+            •  Eat more vegetables - add them at every meal.<br>
+            •  Drink plenty of water - you can become hungry when thirsty.<br>
+            •  Try eating off smaller plates so as to eat smaller portions.<br>
+            •  Exercise between 30 minutes to one hour each day with moderate exercise - brisk walking, team sport, cycling or swimming.<br>
+            •  Be mindful of what you put in your mouth and your shopping trolley.<br>
+        </div>
+
+        <p class="diet-para"><strong> Dont's</strong></p>
+
+        <div class="diet-para">
+
+            •  Rely on soft drinks, sweetened cereals, cookies and cakes, donuts and pastries, chips, and confectionery to get you through the day.<br>
+            •  Don't skip meals. This will tempt you to snack and DO NOT snack between meals.<br>
+            •  Avoid eating quickly. Sit and chew each bite. Try using chopsticks!<br>
+            •  Don't food shop when you're hungry.<br>
+            •  Don't eat more than two or three pieces of fruit per day.<br>
+        </div>
+</div>
+
+<div id="obese">
+    <div class="diet-box">
+        <h3 class="diet-para">OBESE</h3>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR BREAKFAST(8:00-8:30AM)-egg whites, toasted brown bread, low fat milk (no sugar), low fat curd, besan cheela, vegetable brown bread upma, vegetable poha, low fat milk with oats, fruits, coconut water.</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR LUNCH(2:00-2:30PM)- 1 bowl dal(any) + 1 chapati + 1/2 bowl low fat curd + salad</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR EVENING SNACKS (4:00-4:30PM)-fruit salad, sprouts salad, soup, fruits, low fat milk (no sugar)</p>
+        <p class="diet-para">•  ITEMS THAT CAN BE TAKEN FOR DINNER(8:00-8:30PM)- 1 bowl vegetable(any) + 1 chapati + salad</p>
+
+        <h3 class="diet-para">Do's And Dont's While following Diet Plan for Obese</h3>
+
+        <p class="diet-para"><strong> Do's</strong></p>
+
+        <div class="diet-para">
+            •  Eat more vegetables - add them at every meal.<br>
+            •  Drink plenty of water - you can become hungry when thirsty.<br>
+            •  Try eating off smaller plates so as to eat smaller portions.<br>
+            •  Exercise between 30 minutes to one hour each day with moderate exercise - brisk walking, team sport, cycling or swimming.<br>
+            •  Be mindful of what you put in your mouth and your shopping trolley.<br>
+        </div>
+
+        <p class="diet-para"><strong> Dont's</strong></p>
+
+        <div class="diet-para">
+            •  Rely on soft drinks, sweetened cereals, cookies and cakes, donuts and pastries, chips, and confectionery to get you through the day.<br>
+            •  Don't skip meals. This will tempt you to snack and DO NOT snack between meals.<br>
+            •  Avoid eating quickly. Sit and chew each bite. Try using chopsticks!<br>
+            •  Don't food shop when you're hungry.<br>
+            •  Don't eat more than two or three pieces of fruit per day.<br>
+        </div>
+</div>
+
+<div class="diet-box">
+<h2 id="success" class="diet-para">OUR SUCCESS STORIES</h2>
+<p class="diet-para">•  "DIETZONE not only helps me hit my macros, but also makes sure I'm not eating the same bland thing every day. I've lost 35 lbs over the past year, and with DIETZONE, I'm eating and performing better than ever."<br>ARUSHI GUPTA @arushigupta </p>
+<p class="diet-para">•  "I found out about DIETZONE in one year ago and lost 32 lbs in 6 months! Now I'm a fit over 50 female in amazing condition, and this site is what I refer to several times a day to ensure I eat properly and manage my macros."<br> YASHNA NAGPAL @yashna3903 </p>
+<p class="diet-para">•  "I started tracking my weight in one year ago when I was 184lbs. In May I signed up for DIETZONE and immediately appreciated being able to just cook the menu and not worry about what to have for dinner. By November I was down to 155lbs and I still use DIETZONE today!"<br> YANA PARASHAR @yana1212</p>
+</div>
+
+<div id="contact" class="diet-box">
+
+<h3 class="diet-para">CONTACT US</h3>
+<p class="diet-para"><strong>Phone No.-</strong>981876XXXX, 986578XXXX<br><strong>Email Id-</strong>arushi1717@gmail.com, dhriti2323@gmail.com</P>
+</div>
+</div>
+<div class="container"> </div>
+</body>  
+
+</html>

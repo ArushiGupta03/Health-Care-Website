@@ -1,0 +1,165 @@
+
+
+body{
+    background:mistyrose;
+    margin:0px;
+    padding:0px;
+    background-size: 1348px 320px;
+    background-repeat: no-repeat;
+}
+
+#home{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'EB Garamond', serif;
+
+    border-bottom:1px solid black;
+    background-color: rgb(162, 244, 244);
+    margin:40px;
+    padding:0.5px;
+}
+
+.image{
+    position:center !important;
+     margin: 40px;
+     border:none;
+     padding:0.5px;
+
+}
+#bmi1{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+}
+
+.container{
+
+    padding:30px;
+
+}
+.right{
+    position:absolute;
+    display:inline-block;
+    right:6px;
+    margin-right:34px;
+    top:39px;
+}
+.left{
+
+    display:inline-block;
+    position:absolute;
+    left:38px;
+    top:18px;
+}
+.logo{
+        position: absolute;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        top: 1px;
+        right: 30px;
+        width: 100;
+        height:100;
+        
+
+    }
+ #fc{
+    text-align: center;
+
+ }   
+
+#fitnessbox{
+    display:block;
+/* padding-left:10%; */
+    text-align:center;
+    margin:auto;
+    width:30%;
+    border:2px solid black; 
+
+}
+
+    .middle{
+        color:rgb(221, 242, 250);
+        display: block;
+        width: 55%;
+        margin: 10px auto;
+        text-align: center;
+        /* border: 2px solid black; */
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 16px;
+    }
+    .navbar li a{
+        text-decoration: none;
+        color: rgb(110, 104, 132);
+        padding: 7px 20px;
+       
+    }
+
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration: none;
+        color:rgb(148, 132, 177);
+        background-color: lightpink;
+    }
+
+
+    .diet-box{
+        background-color:rgb(221, 242, 250);
+        border:2px solid rgb(136, 132, 159);
+        border-radius: 8px;
+        margin-top:10px;
+        padding-bottom: 15px;
+    }
+
+    .diet-para{
+
+        margin-left:10px;
+        border:none;
+    }
+
+    #linkbutton:link, #linkbutton:visited {
+        background-color: #e2ecef;
+        color: rgb(26, 11, 53);
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-family: 'EB Garamond', serif;
+      }
+
+      .linkbtnclass{
+        border:1px solid rgb(28, 28, 27);
+        border-radius: 5px;
+
+
+      }
+      
+
+      #linkbutton:hover, #li1:a.hover {
+        background-color: rgb(169, 143, 218);
+      }
+  
+      #linkbutton:active {
+          background-color: rgb(103, 94, 125);
+      }
+.container>h2{
+    color:black;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'EB Garamond', serif;
+
+}
+.container>.p2{
+    color:rgb(68, 68, 177);
+
+}
+    
+      
+
+
+
+
